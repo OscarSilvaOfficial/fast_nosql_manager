@@ -1,5 +1,5 @@
 from fast_nosql_manager.interfaces.db_config_interface import DBConfigInterface
-from pymongo import MongoClient
+from pymongo import MongoClient, errors
 from pymongo import errors
 
 class Mongo(object):
@@ -12,6 +12,10 @@ class Mongo(object):
   def __init__(self, db_config: DBConfigInterface, db_name: str = 'mongo'):
     self._conn: MongoClient = db_config.get_connection()
     self._db_name = db_name
+    
+  def delete_document(self, collection_name, where):
+    collection = self._conn[self._db_name][collection_name]
+    return collection.delete_one(where)
     
   def create_document(self, collection_name, documents):
     collection = self._conn[self._db_name][collection_name]
