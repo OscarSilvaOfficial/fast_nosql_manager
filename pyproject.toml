@@ -1,13 +1,12 @@
 [tool.poetry]
-name = "fast_sql_manager"
+name = "fast_nosql_manager"
 version = "1.2.4"
-description = "Um pacote simples para realizar operações no banco"
+description = "Um pacote simples para realizar operações no mongoDB"
 authors = ["OscarSilvaOfficial <oscarkaka222@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-mysql-connector-python = "^8.0.27"
 pymongo = "^4.0.1"
 
 [tool.poetry.dev-dependencies]

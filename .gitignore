@@ -140,5 +140,3 @@ cython_debug/
 .vscode
 
 requirements.txt
-
-teste.db
