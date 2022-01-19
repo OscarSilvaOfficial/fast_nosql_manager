@@ -1,10 +1,8 @@
 # Introdução
-
 Essa biblioteca foi criada como uma forma de abstração das operações mais simples
 de um banco noSQL.
 
 # Início
-
 Após fazer a instalação com o pip install fast_nosql_manager
 é necessário que você importe a classe correspondente ao banco
 que deseja manipular.
