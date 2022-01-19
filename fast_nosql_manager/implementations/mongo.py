@@ -1,5 +1,5 @@
-from fast_sql_manager.abstractions._mongo import Mongo
-from fast_sql_manager.interfaces.db_config_interface import DBConfigInterface
+from fast_nosql_manager.abstractions._mongo import Mongo
+from fast_nosql_manager.interfaces.db_config_interface import DBConfigInterface
 import pymongo
 
 

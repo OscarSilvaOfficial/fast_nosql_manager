@@ -1,4 +1,4 @@
-from fast_sql_manager.interfaces.db_config_interface import DBConfigInterface
+from fast_nosql_manager.interfaces.db_config_interface import DBConfigInterface
 from pymongo import MongoClient
 from pymongo import errors
 
