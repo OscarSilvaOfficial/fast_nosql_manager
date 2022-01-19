@@ -43,6 +43,11 @@ mongo.create_document(
 )
 ```
 
+## delete_document
+```python
+mongo.delete_document(collection_name='teste', where={'name': 'Oscar'})
+```
+
 ## select_all
 ```python
 mongo.select_all(collection_name='teste')
