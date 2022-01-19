@@ -13,7 +13,12 @@ def test_create_document():
   
 def test_select_all():
   response = mongo.select_all(collection_name='teste')
-  assert type(response) == list
+  assert len(response) == 2
+  
+def test_delete_document():
+  mongo.delete_document('teste', {'name': 'Oscar'})
+  response = mongo.select_all(collection_name='teste')
+  assert len(response) == 1
 
 def test_delete_collection():
   mongo.delete_collection('teste')
