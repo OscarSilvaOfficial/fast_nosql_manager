@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="fast_nosql_manager",
-    version="0.2.0",
+    version="0.3.0",
     author="Oscar da Silva",
     author_email="oscarkaka222@gmail.com",
     description="Um pacote simples para realizar operações no mongoDB",

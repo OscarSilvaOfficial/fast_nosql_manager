@@ -13,6 +13,11 @@ class Mongo(object):
     self._conn: MongoClient = db_config.get_connection()
     self._db_name = db_name
     
+  def update_document(self, collection_name, where, new_values):
+    collection = self._conn[self._db_name][collection_name]
+    update_values = { "$set": new_values }
+    return collection.update_one(where, update_values, upsert=False)
+    
   def delete_document(self, collection_name, where):
     collection = self._conn[self._db_name][collection_name]
     return collection.delete_one(where)
