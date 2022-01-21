@@ -8,7 +8,7 @@ Após fazer a instalação com o pip install fast_nosql_manager
 que deseja manipular.
 
 ```python
-from fast_nosql_manager.implementations.mongo import MongoRepository
+from fast_nosql_manager import MongoRepository
 ```
 
 Ao importar a classe você pode instância-la ou
