@@ -23,12 +23,15 @@ class Mongo(object):
     return collection.delete_one(where)
     
   def create_document(self, collection_name, documents):
-    collection = self._conn[self._db_name][collection_name]
+    try:
+      collection = self._conn[self._db_name][collection_name]
+      
+      if isinstance(documents, list):
+        return collection.insert_many(documents)
     
-    if isinstance(documents, list):
-      return collection.insert_many(documents)
-  
-    return collection.insert_one(documents)
+      return collection.insert_one(documents)
+    except Exception as err:
+      raise Exception(err)
     
   def delete_collection(self, collection_name):
     return self._conn[self._db_name].drop_collection(collection_name)
