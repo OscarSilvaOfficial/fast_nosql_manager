@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fast_nosql_manager"
-version = "0.3.2"
+version = "0.3.3"
 description = "Um pacote simples para realizar operações no mongoDB"
 authors = ["OscarSilvaOfficial <oscarkaka222@gmail.com>"]
 license = "MIT"
