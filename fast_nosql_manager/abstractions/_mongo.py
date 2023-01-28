@@ -31,16 +31,11 @@ class Mongo(object):
     return collection.insert_one(documents)
     
   def delete_collection(self, collection_name):
-    try:
-      return self._conn[self._db_name].drop_collection(collection_name)
-    except errors.CollectionInvalid:
-      return
+    return self._conn[self._db_name].drop_collection(collection_name)
+
     
   def create_collection(self, collection_name: str):
-    try:
-      return self._conn[self._db_name].create_collection(collection_name)
-    except errors.CollectionInvalid:
-      return
+    return self._conn[self._db_name].create_collection(collection_name)
       
   def select_all(self, collection_name, where={}):
     return_data=[]
